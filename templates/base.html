@@ -1,15 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-</head>
-<body>
-    <div class="topnav">
-        <a class="active" href="#myleague">MY LEAGUE</a>
-        <a href="#roster">ROSTER</a>
-        <a href="#stats">STATS</a>
-        <a href="#matchups">MATCHUPS</a>
-        <a href="#trade">TRADE</a>
+<title>{% block title %}{% endblock %} - FantasyLCS</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark bg-gradient">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Fantasy LCS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarLCS">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">MY LEAGUE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#roster">ROSTER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#stats">STATS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#matchups">MATCHUPS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#trade">TRADE</a>
+                </li>
+            </ul>
+        </div>
     </div>
-</body>
-</html>
+</nav>
+<section class="content">
+    <header>
+        {% block header %}{% endblock %}
+    </header>
+    {% block content %}{% endblock %}
+</section>
