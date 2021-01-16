@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>{% block title %}League Standings{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <table class="table" id="standingsTable">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Team</th>
+                <th scope="col">Owner</th>
+                <th scope="col">Total Points</th>
+                <th scope="col">W</th>
+                <th scope="col">L</th>
+                <th scope="col">T</th>
+                <th scope="col">Team MVP</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Thots, Show Mercy</td>
+                <td>NarglesRawr</td>
+                <td>420.69</td>
+                <td>4</td>
+                <td>2</td>
+                <td>0</td>
+                <td>C9 Sneaky</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
