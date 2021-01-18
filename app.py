@@ -14,5 +14,9 @@ def stats():
 def roster():
     return render_template("roster.html")
 
+@app.route('/matchups')
+def matchups():
+    return render_template("matchups.html")
+
 if __name__ == '__main__':
     app.run(debug=True)
