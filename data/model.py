@@ -44,6 +44,7 @@ class Schema:
         CREATE TABLE IF NOT EXISTS "Team" (
         id INTEGER PRIMARY KEY,
         TeamName TEXT,
+        Abbreviation TEXT,
         Wins INTEGER,
         Loses INTEGER,
         OwnerId INTEGER FOREIGN KEY REFERENECES User(id)
