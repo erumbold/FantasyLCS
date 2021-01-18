@@ -34,7 +34,10 @@ class Schema:
         id INTEGER PRIMARY KEY,
         UserName TEXT,
         TeamName TEXT,
-        Points FLOAT
+        Points FLOAT,
+        Wins INTEGER,
+        Losses INTEGER,
+        Ties INTEGER
         );
         """
         self.conn.execute(query)
@@ -58,5 +61,23 @@ class Schema:
         id INTEGER PRIMARY KEY,
         Position TEXT
         ); 
+        """
+        self.conn.execute(query)
+
+    def create_league_table(self):
+        query = """
+        CREATE TABLE IF NOT EXISTS "League" (
+        id INTEGER PRIMARY KEY,
+        Name TEXT NOT NULL
+        );
+        """
+        self.conn.execute(query)
+
+    def create_league_to_user_table(self):
+        query = """
+        CREATE TABLE IF NOT EXISTS "LeagueToUser" (
+        LeagueId INTEGER NOT NULL,
+        UserId INTEGER NOT NULL
+        );
         """
         self.conn.execute(query)
