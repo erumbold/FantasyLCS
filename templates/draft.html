@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>{% block title %}Summer 2021 Draft{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <div>
+        <ul class="list-inline">
+            <li class="list-inline-item"><h4>Now Picking:</h4></li>
+            <li class="list-inline-item"><h4>Up Next:</h4></li>
+        </ul>
+        <ul class="list-group list-group-horizontal-sm">
+            <li class="list-group-item">0:69</li>
+            <li class="list-group-item">NarglesRawr</li>
+            <li class="list-group-item">Vid</li>
+            <li class="list-group-item">AmericanGhoul</li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="container col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <h3>Select Players</h3>
+            <input type="text" class="form-control" placeholder="Search by position, name, or team." aria-label="Search by position, name, or team.">
+            <div class="btn-group d-flex">
+                <button class="btn btn-secondary w-100" id="filterAllBtn">All</button>
+                <button class="btn btn-secondary w-100" id="filterTopBtn">Top</button>
+                <button class="btn btn-secondary w-100" id="filterJungBtn">Jung</button>
+                <button class="btn btn-secondary w-100" id="filterMidBtn">Mid</button>
+                <button class="btn btn-secondary w-100" id="filterAdcBtn">ADC</button>
+                <button class="btn btn-secondary w-100" id="filterSupBtn">Sup</button>
+                <button class="btn btn-secondary w-100" id="filterTeamBtn">Team</button>
+            </div>
+        </div>
+        <div class="container col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <h3>My Roster</h3>
+            <h2>[TEAM NAME]</h2>
+            <table class="table" id="myRosterTable">
+                <tbody>
+                    <tr>
+                        <th scope="row">Top</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Jungle</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Mid</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">ADC</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Support</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Flex</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Team</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt</th>
+                        <th></th>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="container col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <h3>Draft History</h3>
+            <div class="dropdown w-100">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    All Picks
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">All Picks</a>
+                    <a class="dropdown-item" href="#">NarglesRawr's Picks</a>
+                    <a class="dropdown-item" href="#">Vid's Picks</a>
+                </div>
+            </div>
+            <table class="table" id="draftHistoryTable">
+                <thead>
+                    <tr>
+                        <th scope="col">Pick</th>
+                        <th scope="col">Pro</th>
+                        <th scope="col">Team</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+{% endblock %}
