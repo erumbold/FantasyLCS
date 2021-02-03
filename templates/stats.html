@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>{% block title %}Player Stats{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <table class="table table-striped" id="statsTable">
+        <thead>
+            <tr>
+                <th scope="col">Player</th>
+                <th scope="col">Team</th>
+                <th scope="col">Position</th>
+                <th scope="col">Average Points Per Game</th>
+                <th scope="col">Kills</th>
+                <th scope="col">Deaths</th>
+                <th scope="col">Assists</th>
+                <th scope="col">Average CS</th>
+                <th scope="col">Triple Kills</th>
+                <th scope="col">Quadra Kills</th>
+                <th scope="col">Penta Kills</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">NarglesRawr</th>
+                <td>Cloud9</td>
+                <td>Support</td>
+                <td>69.0</td>
+                <td>420</td>
+                <td>69</td>
+                <td>69</td>
+                <td>151.0</td>
+                <td>10</td>
+                <td>20</td>
+                <td>30</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
